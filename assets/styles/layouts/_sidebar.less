@@ -1,0 +1,412 @@
+
+
+
+
+
+.navbar, .navmenu {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+}
+.navbar {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+
+
+
+
+
+
+
+
+.navbar {
+    position: absolute;
+    width: 100%;
+}
+.navbar .navbar-nav {
+    float: none;
+    text-align: center;
+    margin-top: 30px;
+}
+@media (min-width: 768px) {
+    .navbar-nav>li {
+      float: none;
+      display: inline-block;
+    }
+}
+// Brand
+.navbar-brand, .navbar-brand-img {
+    position: fixed;
+    top: 30px;
+    left: 5%;
+}
+/*
+.nav-justified {
+  max-width: 800px;
+  margin: 30px auto 0;
+}
+*/
+
+
+// Hamburger menu
+
+
+
+
+
+//Styles
+
+body {
+    position: relative;
+}
+.navbar-default .navbar-toggle {
+    border-color: transparent;
+    border-radius: @border-radius-small;
+    &:hover,
+    &:focus {
+        background-color: @navbar-default-toggle-hover-bg;
+    }
+    .icon-bar {
+        background-color: @navbar-default-toggle-icon-bar-bg;
+        height: 3px;
+    }
+}
+.navbar-default .masthead-toggle {
+    position: fixed;
+    top: 30px;
+    right: 5%;
+    display: block;
+}
+.offcanvas {
+    border: 0;
+    li a, .dropdown-menu li a {
+        padding: 10px 25px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        font-size: 14px;
+    }
+    .dropdown .caret {
+        //margin-left: 10px;
+    }
+    .navmenu-nav.dropdown-menu {
+        //background-color: lighten(@navmenu-inverse-bg, 3%);
+    }
+    .has-button {
+        margin: 5px 0;
+        padding: 5px 25px;
+        .navmenu-btn {
+            background-color: lighten(@navmenu-inverse-bg, 8%);
+            border: 1px solid lighten(@navmenu-inverse-bg, 15%);
+            &:hover {
+                background-color: lighten(@navmenu-inverse-bg, 1%);
+            }
+        }
+    }
+}
+
+html, body.page {
+    height: 100%;
+}
+.featured-wrapper {
+    display: table;
+    width: 100%;
+}
+.featured-wrapper-inner {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+/*
+.site-wrapper {
+    height: auto;
+}
+.featured-wrapper {
+    display: table;
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+    position: absolute;
+  left: 0;
+  top: 0;
+}
+.featured-wrapper-inner {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+
+
+
+.cover-container {
+    margin-right: auto;
+    margin-left: auto;
+}
+.inner {
+    padding: 30px;
+    text-align: center;
+}
+.masthead {
+    position: absolute;
+    top: 0;
+}
+.masthead-brand {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    float: left;
+    text-align: left;
+    margin-top: -15px;
+    a {
+        .text-hide();
+        display: inline-block;
+        background-image: url('@{path-img}logo.png');
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        width: 100px;
+        height: 33px;
+    }
+}
+.cover {
+    padding: 0 20px;
+}
+.btn-more {
+    padding: 10px 20px;
+    font-weight: 600;
+    border-radius: @border-radius-small;
+}
+@media (min-width: 768px) {
+    .masthead,
+    .cover-container {
+        width: 100%;
+    }
+}
+@media (min-width: 992px) {
+    .masthead,
+    .cover-container {
+        width: 700px;
+    }
+}
+*/
+.container-wide {
+    padding-left: 8%;
+    padding-right: 8%;
+}
+
+.featured {
+    background: #f5f5f5;
+    //min-height: 500px;
+    //overflow: hidden;
+    //padding-top: 100px;
+    h1 {
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Navmenu and offcanvas navbar
+// --------------------------------------------------
+
+
+// Wrapper and base class
+//
+// Provide a static navmenu from which we expand to create the fixed navmenu
+// variations.
+
+.navmenu,
+.navbar-offcanvas {
+  width: @navmenu-width;
+  height: auto;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: @border-radius-base;
+}
+
+.navmenu-fixed-left,
+.navmenu-fixed-right,
+.navbar-offcanvas {
+  position: fixed;
+  z-index: @zindex-navmenu-fixed;
+  top: 0;
+  bottom: 0;
+  overflow-y: auto;
+  border-radius: 0;
+}
+.navmenu-fixed-left,
+.navbar-offcanvas.navmenu-fixed-left {
+  left: 0;
+  right: auto;
+  border-width: 0 1px 0 0;
+}
+.navmenu-fixed-right,
+.navbar-offcanvas {
+  left: auto;
+  right: 0;
+  border-width: 0 0 0 1px;
+}
+
+.offcanvas .navmenu-nav {
+  margin-top: @navmenu-margin-vertical * 2;
+
+  &.dropdown-menu {
+    position: static;
+    margin: 0;
+    padding: 0;
+    float: none;
+    border: none;
+    .box-shadow(none);
+    border-radius: 0;
+  }
+}
+
+.navbar-offcanvas {
+  .navbar-nav {
+    margin: 0;
+  }
+
+  @media (min-width: @grid-float-breakpoint) {
+    width: auto;
+    border-top: 0;
+    box-shadow: none;
+
+    &.offcanvas {
+      position: static;
+      display: block !important;
+      height: auto !important;
+      padding-bottom: 0; // Override default setting
+      overflow: visible !important;
+    }
+
+    // Account for first and last children spacing
+    .navbar-nav.navbar-left:first-child {
+      margin-left: -@navbar-padding-horizontal;
+    }
+    .navbar-nav.navbar-right:last-child {
+      margin-right: -@navbar-padding-horizontal;
+    }
+
+    .navmenu-brand {
+      display: none;
+    }
+  }
+}
+
+// Brand/project name
+
+.navmenu-brand {
+  display: block;
+  font-size: @font-size-large;
+  line-height: @line-height-computed;
+  padding: @nav-link-padding;
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+  margin: @navmenu-margin-vertical 0;
+}
+
+// Alternate navmenus
+// --------------------------------------------------
+
+
+// Inverse navmenu
+.navmenu-inverse {
+  background-color: @navmenu-inverse-bg;
+  border-color: @navmenu-inverse-border;
+
+  .navmenu-brand {
+    color: @navmenu-inverse-brand-color;
+    &:hover,
+    &:focus {
+      color: @navmenu-inverse-brand-hover-color;
+      background-color: @navmenu-inverse-brand-hover-bg;
+    }
+  }
+
+  .navmenu-text {
+    color: @navmenu-inverse-color;
+  }
+
+  .navmenu-nav {
+    // Caret should match text color on hover
+    > .dropdown > a:hover .caret,
+    > .dropdown > a:focus .caret {
+      border-top-color: @navmenu-inverse-link-hover-color;
+      border-bottom-color: @navmenu-inverse-link-hover-color;
+    }
+
+    // Remove background color from open dropdown
+    > .open > a {
+      &,
+      &:hover,
+      &:focus {
+        background-color: @navmenu-inverse-link-active-bg;
+        color: @navmenu-inverse-link-active-color;
+        .caret {
+          border-top-color: @navmenu-inverse-link-active-color;
+          border-bottom-color: @navmenu-inverse-link-active-color;
+        }
+      }
+    }
+    > .dropdown > a .caret {
+      border-top-color: @navmenu-inverse-link-color;
+      border-bottom-color: @navmenu-inverse-link-color;
+    }
+    &.dropdown-menu {
+      background-color: lighten(@navmenu-inverse-bg, 8%);;
+      & > .divider {
+        background-color: @navmenu-inverse-bg;
+      }
+      > .active > a {
+        &,
+        &:hover,
+        &:focus {
+          background-color: darken(@navmenu-inverse-link-active-bg, 6.5%);
+        }
+      }
+    }
+
+    > li > a {
+      color: @navmenu-inverse-link-color;
+      &:hover,
+      &:focus {
+        color: @navmenu-inverse-link-hover-color;
+        background-color: @navmenu-inverse-link-hover-bg;
+      }
+    }
+    > .active > a {
+      &,
+      &:hover,
+      &:focus {
+        color: @navmenu-inverse-link-active-color;
+        background-color: @navmenu-inverse-link-active-bg;
+      }
+    }
+    > .disabled > a {
+      &,
+      &:hover,
+      &:focus {
+        color: @navmenu-inverse-link-disabled-color;
+        background-color: @navmenu-inverse-link-disabled-bg;
+      }
+    }
+  }
+}
+
+
+
+
+
+
