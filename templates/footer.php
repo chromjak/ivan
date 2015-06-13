@@ -1,14 +1,5 @@
 <?php global $pa; ?>
 <footer class="content-info" role="contentinfo">
-  <?php if ( is_active_sidebar('sidebar-footer') ) { ?>
-    <div class="sidebar-footer">
-      <div class="container">
-        <div class="row">
-          <?php dynamic_sidebar('sidebar-footer'); ?>
-        </div>
-      </div>
-    </div>
-  <?php } ?>
   <div class="footer-bottom">
       <div class="row">
     		<div class="col-md-6 copyright"><?php echo $pa['footer_text']; ?></div>

@@ -28,7 +28,7 @@ add_filter('body_class', __NAMESPACE__ . '\\body_class');
  * Clean up the_excerpt()
  */
 function excerpt_more() {
-  return ' &hellip; <a href="' . get_permalink() . '">' . __('Continued', 'sage') . '</a>';
+  return ' <br> <h4 class="excerpt-more"><a href="' . get_permalink() . '">' . __('Read More', 'sage') . '</a></h4>';
 }
 add_filter('excerpt_more', __NAMESPACE__ . '\\excerpt_more');
 

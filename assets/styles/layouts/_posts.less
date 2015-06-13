@@ -1,11 +1,56 @@
+.entry-title {
+	margin: 0;
+}
+.entry-meta {
+	margin: 15px 0;
+	color: #999;
+	.byline, time {
+		margin-bottom: 0;
+		display: inline-block;
+		font-size: 0.8em;
+	}
+	a:hover {
+		text-decoration: underline;
+	}
+}
+.wp-post-image {
+	margin-bottom: 40px;
+}
+.post.hentry, .posts-navigation {
+	margin-top: @theme-vertical-spacing;
+}
 .blog {
 	.entry-title {
 		line-height: .97;
 		letter-spacing: -3px;
-		font-family: 'Helvetica Neue', 'Helvetica', Arial, sans-serif;
 	}
 }
-
+.excerpt-more {
+	margin: 18px 0 0;
+}
+.posts-navigation {
+	font-family: 'Helvetica Neue', 'Helvetica', Arial, sans-serif;
+	font-weight: 700;
+	font-size: 40px;
+	background-color: #f8f8f8;
+	.nav-previous, .nav-next {
+		display: inline-block;
+		width: 50%;
+		background-color: #f8f8f8;
+		text-align: center;
+		a {
+			display: block;
+			padding-top: 70px;
+			padding-bottom: 70px;
+		}
+	}
+	.nav-previous:hover, .nav-next:hover {
+		background-color: #eee;
+	}
+	.nav-next {
+		float: right;
+	}
+}
 @media (min-width: @screen-sm-min) {
 	.blog .entry-title {
 		font-size: 40px;

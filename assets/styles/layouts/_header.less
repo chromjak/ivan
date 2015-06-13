@@ -1,10 +1,36 @@
 .navbar {
 	z-index: 4;
 }
-
+.featured {
+	position: relative;
+}
+.featured:before {
+	content: ' ';
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	background-color: rgba(0, 0, 0, 0.4);
+}
+.featured-wrapper-inner {
+	position: relative;
+}
+.tagline {
+	font-family: 'Helvetica Neue', 'Helvetica', Arial, sans-serif;
+	font-weight: 700;
+	line-height: 1em;
+	width: 70%;
+	span {
+		font-weight: 100;
+	}
+}
 @media (min-width: @screen-sm-min) {
 	.featured {
 		min-height: 400px;
+	}
+	.tagline {
+		font-size: 36px;
 	}
 }
 
@@ -12,10 +38,16 @@
 	.featured {
 		min-height: 500px;
 	}
+	.tagline {
+		font-size: 46px;
+	}
 }
 
 @media (min-width: @screen-lg-min) {
 	.featured {
 		min-height: 700px;
+	}
+	.tagline {
+		font-size: 76px;
 	}
 }

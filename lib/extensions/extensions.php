@@ -143,7 +143,6 @@ if ( !function_exists( "redux_add_metaboxes" ) ):
                 'id'       => 'header_color',
                 'type'     => 'button_set',
                 'title'    => __( 'Header Color', 'pressapps' ),
-                'default'  => 1,
                 'options'  => array(
                     0 => 'None',
                     1 => 'Dark',

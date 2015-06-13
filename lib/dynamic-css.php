@@ -18,10 +18,12 @@ function pa_output_css() {
     if ($meta['header_color'] == 1) {
        $output .= '.navbar-default .navbar-nav>li>a { color: #000; opacity: 0.8; }';
        $output .= '.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>li>a:hover { color: #000; opacity: 1; }';
+       $output .= '.navbar-default .navbar-brand, .navbar-default .navbar-brand:hover, .tagline { color: #000; }';
     } else {
        $output .= '.navbar-default .navbar-nav>li>a, .navbar-default .navbar-nav>li>a:focus { color: #fff; opacity: 0.8; }';
        $output .= '.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>li>a:hover { color: #fff; opacity: 1; }';
        $output .= '.navbar-default .navbar-toggle .icon-bar { background-color: #fff; }';
+       $output .= '.navbar-default .navbar-brand, .navbar-default .navbar-brand:hover, .tagline { color: #fff; }';
     }
 
 

@@ -1,6 +1,7 @@
 <div class="featured featured-wrapper container-wide">
 	<div class="featured-wrapper-inner">
-		<?php get_template_part('templates/page', 'header'); ?>
+		<?php //get_template_part('templates/page', 'header'); ?>
+		<p class="tagline"><span>I pursue excellence </span><br>and create strong emotional response</p>
 	</div>
 </div>
 <div class="wrap container" role="document">
@@ -18,8 +19,8 @@
 		  <?php get_template_part('templates/content', get_post_type() != 'post' ? get_post_type() : get_post_format()); ?>
 		<?php endwhile; ?>
 
-		<?php the_posts_navigation(); ?>
-
     </main><!-- /.main -->
   </div><!-- /.content -->
 </div><!-- /.wrap -->
+
+<?php the_posts_navigation(); ?>
